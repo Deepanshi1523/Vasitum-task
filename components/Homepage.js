@@ -8,9 +8,9 @@ export default function Homepage() {
     return (
         <>
             <div className="flex justify-between">
-                <Sidenav className="w-[30%]"/>
-                <div className="flex-1 w-[65%]">
-                    <Topnav className=""/>
+                <Sidenav className="w-[30%]" />
+                <div className="flex-1">
+                    <Topnav className="" />
                 </div>
             </div>
         </>

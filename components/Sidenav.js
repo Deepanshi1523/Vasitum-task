@@ -36,8 +36,8 @@ const Sidenav = () => {
 
     return (
         <div className="relative">
-            <button onClick={toggleSidenav} className="p-2 text-[#B2B2B2] lg:hidden">
-                {isOpen ? <AiOutlineClose size={24} /> : <FiMenu size={24} />}
+            <button onClick={toggleSidenav} className="p-[9px] text-[#B2B2B2] lg:hidden">
+                {isOpen ? <AiOutlineClose size={24} /> : <FiMenu size={28} />}
             </button>
 
             <div className={`absolute lg:static top-0 left-0 w-48 h-screen bg-[#E0E0E0] flex flex-col pt-4 transition-transform duration-300 z-10 ${isOpen ? "flex" : "hidden"
