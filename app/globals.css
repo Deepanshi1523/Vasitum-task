@@ -23,3 +23,11 @@ body {
 .sidenav-option:hover {
   background-color: #d3d3d3; /* Light grey hover effect */
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on WebKit browsers */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
+  scrollbar-width: none;     /* Hide scrollbar on Firefox */
+}

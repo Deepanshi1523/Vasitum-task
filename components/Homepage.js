@@ -5,6 +5,8 @@ import Topnav from "./Topnav";
 import Stats from "./Stats";
 import CompanyInfo from "./companyInfo";
 import Announcement from "./Announcement";
+import Activity from "./Activity";
+import UpcomingSchedule from "./upcomingSchedule";
 import image1 from "../public/companyInfo1.png";
 import image2 from "../public/companyInfo2.png";
 
@@ -17,7 +19,7 @@ export default function Homepage() {
                 <div className="flex-col w-[100%] ">
                     <Topnav className="" />
                     <h1 className="mx-2 lg:mx-8 text-[24px] mt-2 font-semibold">Dashboard</h1>
-                    <div className="flex mx-2 lg:mx-6 mt-2 ">
+                    <div className="flex mx-2 lg:mx-6 mt-2 justify-between">
                         <div className="w-[60%]">
                             <div className="flex">
                                 <Stats
@@ -62,7 +64,10 @@ export default function Homepage() {
                             </div>
                             <Announcement/>
                         </div>
-                        <div className="w-[30%]"></div>
+                        <div className="w-[37%]">
+                            <Activity/>
+                            <UpcomingSchedule/>
+                        </div>
                     </div>
                 </div>
             </div>

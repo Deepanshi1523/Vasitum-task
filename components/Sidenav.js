@@ -40,7 +40,7 @@ const Sidenav = () => {
                 {isOpen ? <AiOutlineClose size={24} /> : <FiMenu size={28} />}
             </button>
 
-            <div className={`absolute lg:static top-0 left-0 w-48 h-screen bg-[#E0E0E0] flex flex-col pt-4 transition-transform duration-300 z-10 ${isOpen ? "flex" : "hidden"
+            <div className={`absolute lg:static top-0 left-0 w-48 h-screen bg-[#F0F0F0] flex flex-col pt-4 transition-transform duration-300 z-10 ${isOpen ? "flex" : "hidden"
                 } lg:flex`}>
                 <Image
                     src={logo}
@@ -55,7 +55,7 @@ const Sidenav = () => {
                         <li
                             key={option.name}
                             onClick={() => handleOptionClick(option.name)}
-                            className={`flex items-center px-4 py-2 cursor-pointer hover:bg-gray-400 sidenav-option ${activeOption === option.name ? "text-red-500 font-semibold" : "text-black"
+                            className={`flex items-center px-4 py-2 cursor-pointer hover:bg-[E0E0E0] sidenav-option ${activeOption === option.name ? "text-red-500 font-semibold" : "text-black"
                                 }`}
                         >
                             <span className="mr-2">{option.icon}</span>
@@ -69,7 +69,7 @@ const Sidenav = () => {
                         <li
                             key={option.name}
                             onClick={() => handleOptionClick(option.name)}
-                            className={`flex items-center px-4 py-2 cursor-pointer hover:bg-gray-400 sidenav-option ${activeOption === option.name ? "text-red-500 font-semibold" : "text-black"
+                            className={`flex items-center px-4 py-2 cursor-pointer hover:bg-[#E0E0E0] sidenav-option ${activeOption === option.name ? "text-red-500 font-semibold" : "text-black"
                                 }`}
                         >
                             <span className="mr-2">{option.icon}</span>

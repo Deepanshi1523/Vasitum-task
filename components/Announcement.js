@@ -50,7 +50,7 @@ const Announcement = () => {
             <div className="space-y-4">
                 {currentAnnouncements && (showAll ? currentAnnouncements.items : currentAnnouncements.items.slice(0, 2)).map((item, index) => (
                     <div key={index} className="pb-2">
-                        <div className="flex justify-between items-center bg-[#E0E0E0] p-2 rounded-md">
+                        <div className="flex justify-between items-center bg-[#F0F0F0] p-2 rounded-md">
                             <div>
                                 <p className="text-[16px] font-medium">{item.text}</p>
                                 <span className="text-sm text-gray-500">{item.time}</span>
