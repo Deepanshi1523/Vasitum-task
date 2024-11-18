@@ -4,7 +4,7 @@ import React from "react";
 const Stats = ({ bgColor, title, number, subtitle, subtitleColor }) => {
     return (
         <div
-            className="rounded-md w-full lg:w-[40%] shadow-md flex flex-col mx-2 p-2"
+            className="rounded-md w-[96%] lg:w-[40%] shadow-md flex flex-col lg:mx-2 p-2"
             style={{ backgroundColor: bgColor }}
         >
             <h2 className="text-[18px] font-semibold">{title}</h2>

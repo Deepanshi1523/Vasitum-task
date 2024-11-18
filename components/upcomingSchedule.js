@@ -63,9 +63,9 @@ const UpcomingSchedule = () => {
     const currentAnnouncements = announcements.find(announcement => announcement.date === selectedDate);
 
     return (
-        <div className="p-4 mt-4 bg-white rounded-md border border-[#E0E0E0] w-full h-[350px]">
+        <div className="p-4 mt-4 bg-white rounded-md border border-[#E0E0E0] w-[98%] -ml-2 lg:w-full h-[350px]">
             <div className="flex items-center justify-between mb-3">
-                <h2 className="text-[18px] font-semibold">Upcoming Schedule</h2>
+                <h2 className="text-[18px] font-semibold whitespace-nowrap">Upcoming Schedule</h2>
                 <select
                     onChange={handleDateChange}
                     value={selectedDate}
@@ -73,7 +73,7 @@ const UpcomingSchedule = () => {
                 >
                     {announcements.map((announcement) => (
                         <option key={announcement.date} value={announcement.date}>
-                            {announcement.date === "13 Sep 2021" ? "Today, 13 Sep 2021" : announcement.date}
+                            {announcement.date === "13 Sep 2021" ? "13 Sep 2021" : announcement.date}
                         </option>
                     ))}
                 </select>
@@ -88,9 +88,12 @@ const UpcomingSchedule = () => {
                             <div key={index} className="flex justify-between items-center bg-[#F0F0F0] p-2 rounded-md mt-2">
                                 <div>
                                     <p className="text-[16px] font-medium">{item.text}</p>
-                                    <span className="text-sm text-gray-500">{item.time}</span>
+                                    <div className="flex justify-between">
+                                        <span className="text-sm text-gray-500">{item.time}</span>
+                                        <FiMoreHorizontal size={24} className="text-gray-400 cursor-pointer lg:hidden" />
+                                    </div>
                                 </div>
-                                <FiMoreHorizontal size={24} className="text-gray-400 cursor-pointer" />
+                                <FiMoreHorizontal size={24} className="text-gray-400 cursor-pointer hidden lg:block" />
                             </div>
                         ))
                     ) : (
@@ -108,7 +111,7 @@ const UpcomingSchedule = () => {
                                     <p className="text-[16px] font-medium">{item.text}</p>
                                     <span className="text-sm text-gray-500">{item.time}</span>
                                 </div>
-                                <FiMoreHorizontal size={24} className="text-gray-400 cursor-pointer" />
+                                <FiMoreHorizontal size={24} className="text-gray-400 cursor-pointer hidden lg:block" />
                             </div>
                         ))
                     ) : (

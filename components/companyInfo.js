@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CompanyInfo = ({ title, image, number, men, women, subtitle }) => {
     return (
-        <div className="p-2 flex justify-between rounded-md w-full bg-white border border-[#E0E0E0] mx-2">
+        <div className="p-2 flex justify-between rounded-md w-[96%] lg:w-full bg-white border border-[#E0E0E0] lg:mx-2">
             <div className="w-[40%]">
                 <h2 className="text-[18px] font-semibold whitespace-nowrap">{title}</h2>
                 <p className="text-[48px] font-bold">{number}</p>

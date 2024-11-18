@@ -29,18 +29,18 @@ const Announcement = () => {
     const currentAnnouncements = announcements.find(announcement => announcement.date === selectedDate);
 
     return (
-        <div className="p-4 mx-2 mt-4 bg-white rounded-md border border-[#E0E0E0] w-[98%]">
+        <div className="p-4 lg:mx-2 mt-4 bg-white rounded-md border border-[#E0E0E0] w-[98%] lg:w-[98%] -ml-2 lg:-ml-0">
             <div className="flex items-center justify-between mb-3">
                 <h2 className="text-[18px] font-semibold">Announcements</h2>
                 <div className="flex items-center space-x-2">
                     <select
                         onChange={handleDateChange}
                         value={selectedDate}
-                        className="border border-gray-300 rounded-md px-2 py-1 text-sm"
+                        className="border border-gray-300 rounded-md lg:px-2 lg: py-1 text-sm"
                     >
                         {announcements.map((announcement) => (
                             <option key={announcement.date} value={announcement.date}>
-                                {announcement.date === "13 Sep 2021" ? "Today, 13 Sep 2021" : announcement.date}
+                                {announcement.date === "13 Sep 2021" ? "13 Sep 2021" : announcement.date}
                             </option>
                         ))}
                     </select>
@@ -52,10 +52,16 @@ const Announcement = () => {
                     <div key={index} className="pb-2">
                         <div className="flex justify-between items-center bg-[#F0F0F0] p-2 rounded-md">
                             <div>
-                                <p className="text-[16px] font-medium">{item.text}</p>
-                                <span className="text-sm text-gray-500">{item.time}</span>
+                                <p className="text-[16px] font-medium ">{item.text}</p>
+                                <div className="flex justify-between">
+                                    <span className="text-sm text-gray-500">{item.time}</span>
+                                    <div className="items-center space-x-6 mr-4 flex lg:hidden">
+                                        <TiPin size={20} className="text-gray-400 cursor-pointer" />
+                                        <FiMoreHorizontal size={20} className="text-gray-400 cursor-pointer" />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex items-center space-x-6 mr-4">
+                            <div className="items-center space-x-6 mr-4 hidden lg:flex">
                                 <TiPin size={28} className="text-gray-400 cursor-pointer" />
                                 <FiMoreHorizontal size={28} className="text-gray-400 cursor-pointer" />
                             </div>
@@ -67,7 +73,7 @@ const Announcement = () => {
             <div className="flex items-center justify-center border-t">
                 <button
                     onClick={() => setShowAll(!showAll)}
-                    className="mt- text-[#FF5151] text-[14px]font-semibold mt-2"
+                    className="mt- text-[#FF5151] text-[14px] font-semibold mt-2"
                 >
                     {showAll ? "Hide" : "See All"} Announcements
                 </button>
