@@ -40,7 +40,7 @@ const Sidenav = () => {
                 {isOpen ? <AiOutlineClose size={24} /> : <FiMenu size={28} />}
             </button>
 
-            <div className={`absolute lg:static top-0 left-0 w-48 h-screen bg-[#F0F0F0] flex flex-col pt-4 transition-transform duration-300 z-10 ${isOpen ? "flex" : "hidden"
+            <div className={`absolute lg:static top-0 left-0 w-48 h-[730px] bg-[#F0F0F0] flex flex-col pt-4 transition-transform duration-300 z-10 ${isOpen ? "flex" : "hidden"
                 } lg:flex`}>
                 <Image
                     src={logo}
